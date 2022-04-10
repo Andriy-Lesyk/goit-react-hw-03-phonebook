@@ -16,4 +16,4 @@ function Filter({ filter, onChange }) {
     </div>
   );
 }
-export default Filter;
+export default Filter
