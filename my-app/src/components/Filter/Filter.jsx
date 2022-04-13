@@ -1,6 +1,7 @@
 import React from 'react';
-import { Input } from './Filter.styles';
+import PropTypes from 'prop-types';
 import { v4 as filterId } from 'uuid';
+import { Input } from './Filter.styles';
 
 function Filter({ filter, onChange }) {
   return (
@@ -11,9 +12,12 @@ function Filter({ filter, onChange }) {
         onChange={onChange}
         type="text"
         name="filter"
-        id={filterId(filter)}
       />
     </div>
   );
 }
+Filter.propTypes = {
+  onChange: PropTypes.func,
+  filter: PropTypes.string.isRequired,
+};
 export default Filter;
